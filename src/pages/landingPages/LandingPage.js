@@ -5,39 +5,56 @@ import React from 'react';
 function LandingPage() {
   return (
     <>
-      <Container sx={{ background: 'black', height: '100vh' }}>
+      <Container sx={{ background: 'black', height: '100%' }}>
         <Typography
           variant='h6'
-          sx={{ color: 'white', fontSize: '45px', textAlign: 'center', pt: 3 }}
+          sx={{
+            color: 'white',
+            fontSize: { md: '45px' },
+            textAlign: 'center',
+            pt: 3,
+          }}
         >
           Trustless Bridge
         </Typography>
         <Typography
           variant='h6'
-          sx={{ color: 'white', fontSize: '45px', textAlign: 'center' }}
+          sx={{ color: 'white', fontSize: { md: '45px' }, textAlign: 'center' }}
         >
           Soroban Assets to Solana
         </Typography>
-        <Box sx={{ display: 'flex', pt: 5 }}>
-          <Box sx={{ paddingLeft: 5 }}>
+        <Box
+          sx={{
+            display: { md: 'flex', sm: 'grid', xs: 'grid' },
+            pt: 5,
+            justifyContent: { xs: 'center' },
+          }}
+        >
+          <Box
+            sx={{
+              paddingLeft: { md: 5, sm: 0 },
+              display: { xs: 'inline-grid' },
+              justifyContent: { xs: 'center' },
+            }}
+          >
             <Card
               sx={{
-                width: 250,
-                height: 250,
+                width: { md: 250, xs: 150 },
+                height: { md: 250, xs: 150 },
                 border: 1,
                 borderRadius: 40,
                 backgroundColor: 'transparent',
                 borderColor: 'white',
                 textAlign: 'center',
-                pt: 11,
+                pt: { md: 11, xs: 5.3 },
                 // display: 'flex',
                 // justifyContent: 'center',
                 // alignItems: 'center',
               }}
             >
               <Box
-                width={25}
-                height={25}
+                width={{ md: 25, sm: 30 }}
+                height={{ md: 25, sm: 30 }}
                 component='img'
                 alt='soroban'
                 src='steller.png'
@@ -45,18 +62,23 @@ function LandingPage() {
               <Typography sx={{ color: 'white' }}>Steller</Typography>
             </Card>
           </Box>
-          <Box>
+          <Box
+            sx={{
+              display: { xs: 'inline-grid' },
+              justifyContent: { xs: 'center' },
+            }}
+          >
             <Card
               sx={{
-                width: 250,
-                height: 250,
+                width: { md: 250, xs: 150 },
+                height: { md: 250, xs: 150 },
                 border: 1,
                 borderRadius: 40,
+                pt: { md: 11, xs: 5.3 },
                 borderStyle: 'dashed',
                 borderColor: '#EBFF00',
                 backgroundColor: 'transparent',
                 textAlign: 'center',
-                pt: 11,
                 // display: 'flex',
                 // justifyContent: 'center',
                 // alignItems: 'center',
@@ -73,35 +95,44 @@ function LandingPage() {
             </Card>
           </Box>
 
-          <Box sx={{ paddingLeft: 10, pt: 10 }}>
-            <Box
-              sx={{ position: 'relative' }}
-              component='img'
-              alt='hexagonal'
-              src='hexagonal.png'
-            />
+          <Box
+            sx={{
+              paddingLeft: { md: 10, sm: 1 },
+              pt: { md: 10, xs: 3 },
+              pb: { xs: 2 },
+              display: { xs: 'flex', md: 'inline-block' },
+              justifyContent: { xs: 'center' },
+            }}
+          >
             <Grid
               container
               sx={{
-                position: 'absolute',
+                width: { xs: '80%', md: '100%' },
                 // top: 10,
-                bottom: '37%',
-                left: '53.4%',
+                display: { xs: 'flex' },
+                justifyContent: { xs: 'center' },
+                padding: '8px',
+                border: '1px solid white',
+                borderTopLeftRadius: '30px',
+                borderBottomLeftRadius: '30px',
+                borderTopRightRadius: '30px',
+                borderBottomRightRadius: '30px',
                 // transform: 'translateX(-50%)'
               }}
             >
               <Grid item>
                 <img src='/logo.png' alt='logo' width={130} height={30} />
               </Grid>
-            
             </Grid>
           </Box>
 
-          <Box sx={{ paddingLeft: 10 }}>
+          <Box sx={{ paddingLeft: {md:10,xs:1},
+          
+          display: { xs: 'inline-grid' },
+          justifyContent: { xs: 'center' },
+          }}>
             <Card
               sx={{
-                width: 250,
-                height: 250,
                 border: 1,
                 borderRadius: 40,
                 borderStyle: 'dashed',
@@ -109,6 +140,11 @@ function LandingPage() {
                 backgroundColor: 'transparent',
                 textAlign: 'center',
                 pt: 11,
+                width: { md: 250, xs: 150 },
+                height: { md: 250, xs: 150 },
+                border: 1,
+                borderRadius: 40,
+                pt: { md: 11, xs: 5.3 },
                 // display: 'flex',
                 // justifyContent: 'center',
                 // alignItems: 'center',

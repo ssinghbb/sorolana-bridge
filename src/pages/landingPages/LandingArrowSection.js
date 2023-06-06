@@ -12,7 +12,8 @@ function LandingArrowSection() {
                     border: 1,
                     borderColor: '#1F8BF4',
                     borderRadius: 4,
-                    paddingBottom: 3
+                    paddingBottom: 3,
+                    mt:10
                 }}
                 >
                     <Grid container spacing={2}>
